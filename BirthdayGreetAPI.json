@@ -1,0 +1,92 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "BirthdayGreetAPI",
+    "version": "1.0",
+    "description": "This API is created for Almabase Solutions Engineer Task",
+    "contact": {
+      "name": "Nitin Singh",
+      "email": "nitin7570@gmail.com",
+      "url": "https://www.linkedin.com/in/nitin-singh-0ab310111/"
+    }
+  },
+  "schemes": [
+    "https"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "paths": {
+    "/name": {
+      "post": {
+        "summary": "Send Name",
+        "operationId": "post-name",
+        "description": "Send a new name.",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "description": "",
+              "type": "object",
+              "x-examples": {
+                "example-1": {
+                  "name": ""
+                }
+              },
+              "properties": {
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name"
+              ]
+            },
+            "x-examples": {
+              "example-1": {
+                "name": "Nitin"
+              }
+            },
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            },
+            "examples": {
+              "example-1": "Happy Birthday, Nitin!"
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            },
+            "examples": {}
+          }
+        },
+        "tags": [
+          "name"
+        ]
+      },
+      "parameters": []
+    }
+  },
+  "definitions": {},
+  "host": "m7kz4er8f6.execute-api.us-east-1.amazonaws.com",
+  "basePath": "/v1",
+  "securityDefinitions": {},
+  "tags": [
+    {
+      "name": "name"
+    }
+  ]
+}
